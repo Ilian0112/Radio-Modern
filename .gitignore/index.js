@@ -10,6 +10,7 @@ bot.on("ready", () => {
         .setTimestamp()
         .setColor("#04B404")
     bot.channels.findAll("name", "logs-radio").map(channel => channel.send(connection_embed));
+    console.log(separation + "\nBot prêt\n" + separation);
     autoplayradio();
 });
 
