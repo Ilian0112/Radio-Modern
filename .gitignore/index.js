@@ -15,8 +15,8 @@ bot.on("ready", () => {
 
 function autoplayradio () {
 
-    var channels_autoplayradio = ["482530580123222044", "480886933115895809"]
-    //                           BAR                     Imaginarium
+    var channels_autoplayradio = ["482530580123222044", "480886933115895809", "482811565188579338"]
+    //                           BAR                     Imaginarium          Slendarmy V2
 
     autoplayradio_join();
 
