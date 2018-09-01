@@ -5,13 +5,18 @@ var bot = new Discord.Client();
 var separation = "><><><><><><><><><><><";
 
 bot.on("ready", () => {
-    autoplayradio();    
+    var connection_embed = new Discord.RichEmbed()
+        .setTitle("Radio-Modern-1 - Je suis connecté")
+        .setTimestamp()
+        .setColor(embed_color)
+    bot.channels.findAll("name", "logs-radio").map(channel => channel.send(connection_embed));
+    autoplayradio();
 });
 
 function autoplayradio () {
 
-    var channels_autoplayradio = ["481202105382862848", "444201909666971648", "442651081080569867"]
-    //                           Ilian                  SupersFanne           Le QZ
+    var channels_autoplayradio = ["482530580123222044", "480886933115895809", "467298506202152961"]
+    //                           BAR                     Imaginarium          Universus
 
     autoplayradio_join();
 
@@ -24,7 +29,7 @@ function autoplayradio () {
                     connection.playStream(res);
                 })
             })
-            console.log("-> autojoin\n    + Salon \"" + channels_autoplayradio_find.name + "\" (" + channels_autoplayradio_find.guild.name + ")\n" + separation)
+            console.log("-> autojoin\n    - Salon \"" + channels_autoplayradio_find.name + "\" (" + channels_autoplayradio_find.guild.name + ")\n" + separation)    
         }
         setTimeout(autoplayradio_leave, 15 * 60 * 1000)
     }
@@ -34,7 +39,7 @@ function autoplayradio () {
         for (i = 0; i < channels_autoplayradio.length; i++) {
             var channels_autoplayradio_find = bot.channels.find("id", channels_autoplayradio[i]);
             channels_autoplayradio_find.leave();
-            console.log("-> autojoin\n    - Salon \"" + channels_autoplayradio_find.name + "\" (" + channels_autoplayradio_find.guild.name + ")\n" + separation)
+            console.log("-> autojoin\n    + Salon \"" + channels_autoplayradio_find.name + "\" (" + channels_autoplayradio_find.guild.name + ")\n" + separation)
         }
         autoplayradio_join();
     }
