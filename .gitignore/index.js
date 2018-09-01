@@ -8,7 +8,7 @@ bot.on("ready", () => {
     var connection_embed = new Discord.RichEmbed()
         .setTitle("Radio-Modern-1 - Je suis connecté")
         .setTimestamp()
-        .setColor(embed_color)
+        .setColor("#04B404")
     bot.channels.findAll("name", "logs-radio").map(channel => channel.send(connection_embed));
     autoplayradio();
 });
