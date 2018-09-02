@@ -1,5 +1,7 @@
 const Discord = require("discord.js");
 
+let prefix = ".";
+
 var bot = new Discord.Client();
 
 var separation = "><><><><><><><><><><><";
