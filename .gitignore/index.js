@@ -25,7 +25,6 @@ bot.on("message", async function (message) {
     switch (command.toLowerCase()) {
         case "autoradio":
         case "auto-radio":
-            message.delete();
             console.log("-> " + prefix + "auto-radio\n" + separation)
             autoplayradio();
             break;
