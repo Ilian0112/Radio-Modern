@@ -14,9 +14,25 @@ bot.on("ready", () => {
     autoplayradio();
 });
 
+bot.on("message", async function (message) {
+    if (message.author.equals(bot.user)) return;
+    if (!message.content.startsWith(prefix)) return;
+    if (message.author.id !== "323039726040776705") return;
+    var splited = message.content.substring(prefix.length).split(" ");
+    var command = splited[0]
+    switch (command.toLowerCase()) {
+        case "autoradio":
+        case "auto-radio":
+            message.delete();
+            console.log("-> " + prefix + "auto-radio\n" + separation)
+            autoplayradio();
+            break;
+    }
+});
+
 function autoplayradio () {
 
-    var channels_autoplayradio = ["482530580123222044", "480886933115895809"/*, "482811565188579338"*/]
+    var channels_autoplayradio = ["482530580123222044", "480886933115895809", "482811565188579338"]
     //                           BAR                     Imaginarium          Slendarmy V2
 
     autoplayradio_join();
@@ -32,7 +48,7 @@ function autoplayradio () {
             })
             console.log("-> autojoin\n    - Salon \"" + channels_autoplayradio_find.name + "\" (" + channels_autoplayradio_find.guild.name + ")\n" + separation)    
         }
-        setTimeout(autoplayradio_leave, 15 * 60 * 1000)
+        setTimeout(autoplayradio_leave, 60 * 60 * 1000)
     }
 
     function autoplayradio_leave () {
