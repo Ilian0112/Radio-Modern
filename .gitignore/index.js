@@ -33,8 +33,8 @@ bot.on("message", async function (message) {
 
 function autoplayradio () {
 
-    var channels_autoplayradio = ["432593928416657409"/*, "482530580123222044", "480886933115895809", "499601814656909321"*/]
-    //                           Radio Modern           BAR                     Imaginarium          Omega
+    var channels_autoplayradio = ["482530580123222044", "480886933115895809", "499601814656909321"]
+    //                            BAR                   Imaginarium           Omega
 
     autoplayradio_join();
 
