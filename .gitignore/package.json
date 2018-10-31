@@ -12,7 +12,7 @@
     "bufferutil": "^3.0.5",
     "discord.js": "^11.4.2",
     "discord.js-arbitrary-ffmpeg": "^1.0.0",
-    "ffmepg": "0.0.2-security",
+    "ffmpeg": "0.0.4",
     "ffmpeg-binaries": "^4.0.0",
     "forever-monitor": "^1.7.1",
     "fs": "0.0.1-security",
@@ -24,7 +24,7 @@
     "uws": "^10.148.2",
     "when": "^3.7.8",
     "ytdl": "^0.10.2",
-    "ytdl-core": "^0.20.4"
-  },
+    "ytdl-core": "^0.27.1"
+  },  
   "devDependencies": {}
 }
