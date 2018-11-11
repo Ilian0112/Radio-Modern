@@ -6,8 +6,8 @@ var separation = "><><><><><><><><><><><";
 
 var prefix = ".";
 
-var channels_autoradio = ["442651081080569867", "481202105382862848", "480886933115895809"];
-//                        Le QZ                 Ilian                 Imaginarium
+var channels_autoradio = ["442651081080569867", "499601814656909321", "506018226648514570"];
+//                        Le QZ                 Omega                 7.5.1
 
 bot.on("ready", () => {
     var embed = new Discord.RichEmbed()
