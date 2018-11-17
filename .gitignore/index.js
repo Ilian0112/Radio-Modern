@@ -6,8 +6,8 @@ var separation = "><><><><><><><><><><><";
 
 var cooldown = new Set();
 
-var channels_autoradio = ["442651081080569867", "499601814656909321", "482530580123222044", "480886933115895809", "513359352019812353"];
-//                        Le QZ                 Omega                 BAR                   Imaginarium           Aroz
+var channels_autoradio = ["442651081080569867", "499601814656909321", "482530580123222044", "480886933115895809"];
+//                        Le QZ                 Omega                 BAR                   Imaginarium
 
 bot.on("ready", () => {
     var embed = new Discord.RichEmbed()
