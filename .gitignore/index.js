@@ -16,7 +16,7 @@ bot.on("ready", () => {
     bot.channels.findAll("name", "logs-radio").map(c => c.send(embed));
     console.log(separation + "\nBot prêt\n" + separation);
     autoradio_join();
-    setInterval(autoradio_test, 2000)
+    setInterval(autoradio_test, 5000)
 });
 
 function autoradio_join () {
