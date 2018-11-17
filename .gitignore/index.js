@@ -6,7 +6,7 @@ var separation = "><><><><><><><><><><><";
 
 var cooldown = new Set();
 
-var channels_autoradio = [/*"442651081080569867", "499601814656909321", "482530580123222044", */"480886933115895809"/*, "513359352019812353"*/];
+var channels_autoradio = ["442651081080569867", "499601814656909321", "482530580123222044", "480886933115895809", "513359352019812353"];
 //                        Le QZ                 Omega                 BAR                   Imaginarium           Aroz
 
 bot.on("ready", () => {
@@ -36,7 +36,7 @@ function autoradio_test () {
         }
         if (channels_autoradio_find_members_array.length == 1) return autoradio_stop(channels_autoradio[i]);
     }
-    setTimeout(autoradio_test, 5000)
+    setTimeout(autoradio_test, 10000)
 }
 
 function autoradio_play (id) {
