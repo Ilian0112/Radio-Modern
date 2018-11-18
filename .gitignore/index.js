@@ -36,7 +36,7 @@ function autoradio_test () {
         }
         if (channels_autoradio_find_members_array.length == 1) return autoradio_stop(channels_autoradio[i]);
     }
-    setTimeout(autoradio_test, 5000)
+    setTimeout(autoradio_test, 10000)
 }
 
 function autoradio_play (id) {
