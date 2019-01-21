@@ -4,8 +4,8 @@ var bot = new Discord.Client();
 
 var separation = "▬▬▬▬▬▬▬▬▬▬▬▬▬";
 
-var channels_autoradio = ["442651081080569867", "499601814656909321", "480886933115895809"];
-//                        Le QZ                 Omega                 Imaginarium
+var channels_autoradio = ["442651081080569867", "499601814656909321", "536120724536950784"];
+//                        Le QZ                 Omega                 Imaginarium V2
 
 bot.on("ready", () => {
     var embed = new Discord.RichEmbed()
