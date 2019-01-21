@@ -38,4 +38,22 @@ function autoradio_leave () {
     autoradio_join();
 }
 
+var infoRecently_Join = new Set();
+
+bot.on("voiceStateUpdate", (oldMember, newMember) => {
+
+    var infoJoin_embed = new Discord.RichEmbed()
+        .setAuthor("Info", "https://cdn.discordapp.com/attachments/517737550618558466/534453800044462081/678110-sign-info-512.png")
+        .setDescription("Fantastic !\nYou have just joined a channel dedicated to Radio Modern !\n\nIf there is any problem, come [here](" + config.discordserver_link + ")\nThe Radio Modern is a radio broadcasting remix ! If you want to support us, add me to your server [here](http://discordapp.com/oauth2/authorize?&client_id=444951082750312468&scope=bot&permissions=37055552)\nType " + config.prefix + "help for more information about me !\nEnjoy !")
+        .setColor("#2E9AFE")
+
+    if (channels_autoradio.includes(newMember.voiceChannelID)) {
+        if (infoRecently_Join.has(newMember.user.id)) return;
+        if (oldMember.voiceChannelID === newMember.voiceChannelID) return;
+        infoRecently_Join.add(newMember.user.id)
+        newMember.send(infoJoin_embed)
+    }
+    
+})
+
 bot.login(process.env.TOKEN);
