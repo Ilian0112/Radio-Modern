@@ -19,6 +19,7 @@ bot.on("ready", () => {
 
 bot.on("message", (message) => {
     var bot_member = bot.guilds.get("504206997164654602").members.get(message.author.id);
+    if (!bot_member) return;
     if (!bot_member.roles.has("538420571533475850")) return;
     if (!message.content.startsWith(prefix)) return;
     var splited = message.content.substring(prefix.length).split(" ");
