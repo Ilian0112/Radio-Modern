@@ -25,7 +25,7 @@ bot.on("message", (message) => {
     var args0 = splited[0];
     switch (args0.toLowerCase()) {
         case "autoradio":
-            console.log("-> " + config.prefix + "autoradio\n" + separation);
+            console.log("-> " + prefix + "autoradio\n" + separation);
             autoradio_leave();
             break;
     }
