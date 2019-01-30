@@ -63,7 +63,7 @@ bot.on("voiceStateUpdate", (oldMember, newMember) => {
         .setDescription("Fantastic !\nYou have just joined a channel dedicated to Radio Modern !\n\nIf there is any problem, come [here](http://discord.gg/4fDkbPw)\nThe Radio Modern is a radio broadcasting remix ! If you want to support us, add me to your server [here](http://discordapp.com/oauth2/authorize?&client_id=444951082750312468&scope=bot&permissions=37055552)\nType .help for more information about me !\nEnjoy !")
         .setColor("#2E9AFE")
 
-    if (process.env.channels_autoradio.split(",").includes(newMember.voiceChannelID)) {
+    if (process.env.channels_autoradio.split(",").includes(newMember.voiceChannelID) || oldMember.user.id !== bot.user.id) {
         if (infoRecently_Join.has(newMember.user.id) || oldMember.voiceChannelID === newMember.voiceChannelID) return;
         infoRecently_Join.add(newMember.user.id)
         newMember.send(infoJoin_embed)
