@@ -17,7 +17,7 @@ bot.on("ready", () => {
 
 function autoradio_join () {
     for (var i = 0; i < channels_autoradio.length; i++) {
-        var channels_autoradio_found = bot.channels.array().filter(c => c.id === channels_autoradio[i]);
+        var channels_autoradio_found = bot.channels.find("id", channels_autoradio[i]);
         channels_autoradio_found.join().then(connection => {
             require("http").get("http://streaming.radionomy.com/RadioModern", (res) => {
                 connection.playStream(res)
